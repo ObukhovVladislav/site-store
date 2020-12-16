@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Главная</title>
+    {% block css %}
+    {% endblock %}
+    {% block js %}
+    {% endblock %}
 </head>
 <body>
+<div class="block-menu">
+    <ul>
+        <li>
+            <a href="/">Главная</a>
+        </li>
+        <li>
+            <a href="/catalog/">Каталог</a>
+        </li>
+        <li>
+            <a href="/basket/">Корзина</a>
+        </li>
+</ul>
+</div>
+{% block content %}
 
+{% endblock %}
 </body>
 </html>
