@@ -2,5 +2,13 @@ from django.db import models
 
 
 class GamesCategory(models.Model):
-    name = models.CharField(max_length=128)
-    desc = models.TextField(blank=True)
+    name = models.CharField(verbose_name='Категория', max_length=128)
+    desc = models.TextField(verbose_name='Описание ', blank=True)
+
+
+class Games(models.Model):
+    category = models.ForeignKey(GamesCategory, on_delete=models.CASCADE)
+    name = models.CharField(verbose_name='Название игры', max_length=128)
+    desc = models.TextField(verbose_name='Описание игры', blank=True)
+    date = models.DateTimeField(verbose_name='Дата выхода', auto_now_add=True)
+    is_active = models.BooleanField(verbose_name='Активен',  default=True)
