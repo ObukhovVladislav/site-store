@@ -1,4 +1,4 @@
-ul {
+.block-menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -7,12 +7,12 @@ ul {
     display: inline-block;
 }
 
-li {
+.block-menu li{
     float: left;
 
 }
 
-li a {
+.block-menu li a {
     display: block;
     color: #000;
     padding: 8px 16px;
@@ -20,7 +20,7 @@ li a {
     font-size: 25pt;
 }
 
-li a:hover {
+.block-menu li a:hover {
     background-color: #555;
     color: white;
     transition: 0.3s;

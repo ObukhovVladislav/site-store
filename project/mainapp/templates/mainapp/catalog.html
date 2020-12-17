@@ -1,4 +1,12 @@
 {% extends 'mainapp/base.html' %}
+
 {% block content %}
-    <h1>Каталог работает!</h1>
+    <h1>Каталог</h1>
+    <div class="catalog-menu">
+    <ul>
+    {% for item in categories %}
+        <li>{{ item }}</li>
+    {% endfor %}
+    </ul>
+    </div>
 {% endblock %}

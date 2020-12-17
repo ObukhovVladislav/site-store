@@ -1,12 +1,18 @@
 from django.shortcuts import render
 
+from mainapp.models import GamesCategory
+
 
 def index(request):
     return render(request, 'mainapp/index.html')
 
 
 def catalog(request):
-    return render(request, 'mainapp/catalog.html')
+    categories = GamesCategory.objects.all()
+    context = {
+        'categories': categories
+    }
+    return render(request, 'mainapp/catalog.html', context)
 
 
 def basket(request):
