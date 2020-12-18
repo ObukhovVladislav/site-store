@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from mainapp.models import GamesCategory
+from mainapp.models import GamesCategory, Games
 
 
 def index(request):
@@ -18,3 +18,12 @@ def catalog(request):
 
 def basket(request):
     return render(request, 'mainapp/basket.html')
+
+
+def catalog_page(request, pk):
+    games = Games.objects.filter(category_id=pk)
+    context = {
+        'games': games,
+        'page_title': 'Страница каталога'
+    }
+    return render(request, 'mainapp/catalog_page.html', context)

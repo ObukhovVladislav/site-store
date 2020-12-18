@@ -1,0 +1,14 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+    <h1>Страница каталога</h1>
+    <div class="games-menu">
+        <ul>
+            {% for item in games %}
+                <li>
+                    <a href="#">{{ item }} </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}}

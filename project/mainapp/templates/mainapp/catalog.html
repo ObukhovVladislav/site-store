@@ -3,10 +3,12 @@
 {% block content %}
     <h1>Каталог</h1>
     <div class="catalog-menu">
-    <ul>
-    {% for item in categories %}
-        <a href="#"><li>{{ item }}</li></a>
-    {% endfor %}
-    </ul>
+        <ul>
+            {% for item in categories %}
+                <li>
+                    <a href="{% url 'catalog_page' item.pk %}">{{ item }}</a>
+                </li>
+            {% endfor %}
+        </ul>
     </div>
 {% endblock %}
