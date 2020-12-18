@@ -10,7 +10,8 @@ def index(request):
 def catalog(request):
     categories = GamesCategory.objects.all()
     context = {
-        'categories': categories
+        'categories': categories,
+        'page_title': 'Каталог'
     }
     return render(request, 'mainapp/catalog.html', context)
 
