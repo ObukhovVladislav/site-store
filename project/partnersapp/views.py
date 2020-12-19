@@ -5,8 +5,8 @@ from partnersapp.models import Partners
 
 
 def partners(request):
-    partner = Partners.objects.all()
+    partners = Partners.objects.all()
     context = {
-        'partner': partner,
+        'partners': partners,
     }
     return render(request, 'partnersapp/index.html', context)

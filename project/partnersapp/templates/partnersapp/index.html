@@ -4,7 +4,7 @@
     <h1>Партнёры</h1>
     <div class="partners-menu">
         <ul>
-            {% for item in partners %}
+            {% for item in partner %}
                 <li>
                     <a href="{% url 'partnersapp:partners' item.pk %}">
                         {{ item }}
