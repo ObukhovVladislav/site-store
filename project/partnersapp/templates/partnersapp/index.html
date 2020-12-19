@@ -1,0 +1,16 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+    <h1>Партнёры</h1>
+    <div class="partners-menu">
+        <ul>
+            {% for item in partners %}
+                <li>
+                    <a href="{% url 'partnersapp:partners' item.pk %}">
+                        {{ item }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
