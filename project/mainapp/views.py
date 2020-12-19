@@ -20,13 +20,13 @@ def basket(request):
     return render(request, 'mainapp/basket.html')
 
 
-def catalog_page(request, pk):
+def catalog_section(request, pk):
     games = Games.objects.filter(category_id=pk)
     context = {
         'games': games,
         'page_title': 'Страница каталога'
     }
-    return render(request, 'mainapp/catalog_page.html', context)
+    return render(request, 'mainapp/catalog_section.html', context)
 
 
 def game_page(request, pk):
