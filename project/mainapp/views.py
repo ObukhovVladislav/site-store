@@ -20,8 +20,8 @@ def basket(request):
     return render(request, 'mainapp/basket.html')
 
 
-def catalog_section(request, pk):
-    games = Games.objects.filter(category_id=pk)
+def catalog_section(request, category_pk):
+    games = Games.objects.filter(category_id=category_pk)
     context = {
         'games': games,
         'page_title': 'Страница каталога'
@@ -29,8 +29,8 @@ def catalog_section(request, pk):
     return render(request, 'mainapp/catalog_section.html', context)
 
 
-def game_page(request, pk):
-    game = Games.objects.filter(pk=pk)
+def game_page(request, game_pk):
+    game = Games.objects.get(pk=game_pk)
     context = {
         'game': game,
         'page_title': 'Страница игры'
