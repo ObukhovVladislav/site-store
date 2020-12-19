@@ -6,7 +6,7 @@
         <ul>
             {% for item in games %}
                 <li>
-                    <a href="{% url 'game_page' item.pk %}">
+                    <a href="{% url 'main:game_page' item.pk %}">
                         {{ item }}
                     </a>
                 </li>
