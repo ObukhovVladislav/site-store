@@ -25,3 +25,12 @@
     color: white;
     transition: 0.3s;
 }
+.login-form{
+    width: 30%;
+    margin: 6vh auto;
+}
+.h2_center{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
