@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from basketapp.models import GamesBasket
@@ -8,7 +9,8 @@ def index(request):
 
 
 def add(request, games_id):
-    basket_item = GamesBasket.objects.get_or_create(
+    GamesBasket.objects.get_or_create(
         user=request.user,
-        games=games_id
+        games_id=games_id
     )
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

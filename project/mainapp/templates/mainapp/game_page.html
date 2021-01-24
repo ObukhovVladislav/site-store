@@ -3,6 +3,10 @@
 {% block content %}
     <h1>{{ game.name }}</h1>
     <p class="game-desc">
-        <p>{{ game.desc }}</p>
+    <p>{{ game.desc }}</p>
     </p>
+    <a href="{% url 'basket:add' games.id %}">
+        Купить
+    </a>
+
 {% endblock %}}
