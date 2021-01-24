@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ page_title|default:"Магазин" }}</title>
+    <title>{{ page_title|default:"Магазин"|capfirst}}</title>
     {% block css %}
         <link rel="stylesheet" href="/static/css/style.css">
     {% endblock %}
