@@ -1,5 +1,5 @@
 # from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import authenticate
+import django.contrib.auth as auth
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
@@ -10,9 +10,8 @@ def login(request):
     if request.method == 'POST':
         form = LoginForm(data=request.POST)
         if form.is_valid():
-            username = request.POST.get('username')
-            password = request.POST.get('password')
-            authenticate(request, username=username, password=password)
+
+            auth.login(request, form.get_user())
             return HttpResponseRedirect('/')
     else:
         form = LoginForm
