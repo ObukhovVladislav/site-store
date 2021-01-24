@@ -25,7 +25,7 @@
     color: white;
     transition: 0.3s;
 }
-.login-form{
+.login-form, .register-form{
     width: 50%;
     margin: 6vh auto;
 }
