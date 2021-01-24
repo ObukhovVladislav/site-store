@@ -16,10 +16,6 @@ def catalog(request):
     return render(request, 'mainapp/catalog.html', context)
 
 
-def basket(request):
-    return render(request, 'mainapp/basket.html')
-
-
 def catalog_section(request, category_pk):
     games = Games.objects.filter(category_id=category_pk)
     context = {
