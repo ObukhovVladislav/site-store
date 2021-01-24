@@ -24,7 +24,7 @@ urlpatterns = [
 
     path('partners/', include('partnersapp.urls', namespace='partners')),
 
-    path('basket/', mainapp.basket, name='basket'),
+    path('basket/', include('basketapp.urls', namespace='basket')),
 
     path('admin/', admin.site.urls),
 ]
